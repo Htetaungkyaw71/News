@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Site Metas -->
+    <title>Allinone</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
+	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=zawgyi' />
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../static/images/apple-touch-icon.png">
+
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons core CSS -->
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/style.css" rel="stylesheet">
+
+    <!-- Responsive styles for this template -->
+    <link href="../static/css/responsive.css" rel="stylesheet">
+
+    <!-- Colors for this template -->
+    <link href="../static/css/colors.css" rel="stylesheet">
+
+    <!-- Version Garden CSS for this template -->
+    <link href="../static/css/version/garden.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="spinner-wrapper">
+      <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+
+        <div class="topbar-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+
+                            <ul class="nav">
+                                <li class="nav-item">
+                                <a class="nav-link color-green-hover" href="{{url_for('about')}}">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color-green-hover" href="{{url_for('contact')}}">Contact</a>
+                            </li>
+                            </ul>
+
+                    </div><!-- end col -->
+
+<!--                    <div class="col-lg-4">-->
+<!--                    </div>&lt;!&ndash; end col &ndash;&gt;-->
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="text-align: right;">
+
+                        <a style="color: white;font-size:20px;" href="{{url_for('home')}}" >AllInOne</a>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end header-logo -->
+        </div><!-- end topbar -->
+
+        <div class="header-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo text-center" style="font-family: font-family: 'Lobster', 'cursive',">
+                        <h1>AllInOne</h1>
+                            <div>
+                              Daily popular news
+                            </div>
+
+                        </div><!-- end logo -->
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end header-logo -->
+        </div><!-- end header -->
+
+
+
+
+
+    {% block content %}
+
+    {% endblock %}
+      <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="widget">
+                            <div class="footer-text text-center">
+                                <a href="index.html"><img src="images/version/garden-footer-logo.png" alt="" class="img-fluid"></a>
+                                <p>ALLinone is a new website for who need to read all news around the world in one place .</p>
+                                <div class="social">
+                                    <a href="https://www.instagram.com/htetaungkyaw17/" data-toggle="tooltip" data-placement="bottom" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://twitter.com/HtetAun21531056" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://github.com/Htetaungkyaw71/" data-toggle="tooltip" data-placement="bottom" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/htet-aung-kyaw-9a77271a7/" data-toggle="tooltip" data-placement="bottom" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </div>
+
+                                <hr class="invis">
+
+
+                            </div><!-- end footer-text -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright">Copyright &copy; by HAK</div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </footer>
+    <script>
+      let spinnerWrapper = document.querySelector('.spinner-wrapper');
+
+      window.addEventListener('load', function () {
+          // spinnerWrapper.style.display = 'none';
+          spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+          document.querySelector('html,body').style.overflow = 'auto';
+      });
+  </script>
+
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/tether.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+
+
+
+</body>
+</html>

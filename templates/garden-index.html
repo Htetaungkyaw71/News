@@ -1,0 +1,456 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div id="wrapper">
+
+<!-- Nav tabs -->
+       <header class="header">
+            <div class="container">
+
+
+                <nav class="navbar navbar-inverse navbar-toggleable-md">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ForestTimemenu" aria-controls="Forest Timemenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-md-center" id="ForestTimemenu">
+
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Entertainment</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Tech</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Sport</a>
+  </li>
+</ul>
+
+                    </div>
+                </nav>
+            </div><!-- end container -->
+        </header><!-- end header -->
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+         <section class="section wb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h1 style="margin-top: 20px"><a href="https://www.bbc.com/burmese" target="_blank">BBC</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in links %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.bbc.com/{{i.links}}"target="_blank">{{i.texts}}</a>
+
+
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4">
+                         <h1 style="margin-top: 20px"><a href="https://www.rfa.org/burmese" target="_blank">RFA</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in rfalinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="{{i.links}}"target="_blank">{{i.texts}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4" >
+                         <h1 style="margin-top: 20px"><a href="https://www.voanews.com/" target="_blank">VOA</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in voalinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.voanews.com/{{i.link}}" target="_blank" >{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+                       <div class="row">
+                    <div class="col-lg-4">
+                        <h1 style="margin-top: 20px"><a href="https://www.reuters.com/places/myanmar">Reuters</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in rlinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.reuters.com/{{i.link}}" target="_blank">{{i.text}}</a>
+                        </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4">
+                         <h1 style="margin-top: 20px"><a href="https://www.aljazeera.com/where/myanmar/" target="_blank">Aljazeera</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in alilinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.aljazeera.com{{i.link}}"target="_blank">{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4" >
+                         <h1 style="margin-top: 20px"><a href="https://www.theguardian.com/world/myanmar" target="_blank">The Guardian</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in glinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="{{i.link}}" target="_blank" >{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+  </div>
+  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+           <section class="section wb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h1 style="margin-top: 20px"><a href="https://www.eonline.com/news">Eonline</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in eonlinelinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.eonline.com/{{i.link}}"target="_blank">{{i.text}}</a>
+
+
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4">
+                         <h1 style="margin-top: 20px"><a href="https://news.sky.com/entertainment" target="_blank">SKY</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in skylinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://news.sky.com/{{i.link}}"target="_blank">{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4" >
+                         <h1 style="margin-top: 20px"><a href="https://abcnews.go.com/Entertainment/" target="_blank">ABC NEWS</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in abclinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="{{i.link}}" target="_blank" >{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+                       <div class="row">
+                    <div class="col-lg-4">
+                        <h1 style="margin-top: 20px"><a href="https://hollywoodlife.com/">Hollywoodlife</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in hlinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://hollywoodlife.com/{{i.link}}" target="_blank">{{i.text}}</a>
+                        </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4">
+                         <h1 style="margin-top: 20px"><a href="https://www.usmagazine.com/" target="_blank">USmagazine</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in uslinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.usmagazine.com/{{i.link}}"target="_blank">{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4" >
+                         <h1 style="margin-top: 20px"><a href="https://edition.cnn.com/entertainment" target="_blank">Edition<a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in elinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://edition.cnn.com{{i.link}}" target="_blank" >{{i.text}}</a>
+                            </li>
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+  </div>
+  <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+            <section class="section wb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h1 style="margin-top: 20px"><a href="https://www.nytimes.com/section/technology">Nytime Techonology</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in nylinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.nytimes.com{{i.link}}"target="_blank">{{i.text}}</a>
+
+
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4">
+                         <h1 style="margin-top: 20px"><a href=https://news.ycombinator.com/" target="_blank">HackerNews</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in hackerlinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="{{i.link}}"target="_blank">{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4" >
+                         <h1 style="margin-top: 20px"><a href="https://techcrunch.com/" target="_blank">TechCrunch</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in crunchlinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="{{i.link}}" target="_blank" >{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+                       <div class="row">
+                    <div class="col-lg-4">
+                        <h1 style="margin-top: 20px"><a href="https://www.reuters.com/technology/" target="_blank">Reuters Techonology</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in rtechlinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.reuters.com/{{i.link}}" target="_blank">{{i.text}}</a>
+                        </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4">
+                         <h1 style="margin-top: 20px"><a href="https://www.vox.com/recode" target="_blank">Voc Recode</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in vicelinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="{{i.link}}"target="_blank">{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4" >
+                         <h1 style="margin-top: 20px"><a href="https://www.buzzfeednews.com/section/tech" target="_blank">Buzzfeednews</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in buzzlinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="{{i.link}}" target="_blank" >{{i.text}}</a>
+                            </li>
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+  </div>
+  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+          <section class="section wb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h1 style="margin-top: 20px"><a href="https://www.si.com/soccer">Sport Illustrated</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in silinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.si.com/soccer{{i.link}}"target="_blank">{{i.text}}</a>
+
+
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4">
+                         <h1 style="margin-top: 20px"><a href="https://www.bbc.com/sport" target="_blank">BBC sport</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in bbcsportlinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.bbc.com/{{i.link}}"target="_blank">{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4" >
+                         <h1 style="margin-top: 20px"><a href="https://www.eurosport.com/" target="_blank">Eurosport</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in eurolinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="{{i.link}}" target="_blank" >{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+                       <div class="row">
+                    <div class="col-lg-4">
+                        <h1 style="margin-top: 20px"><a href="https://news-eleven.com/sports">FoxSport</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in foxlinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.foxnews.com/{{i.link}}" target="_blank">{{i.text}}</a>
+                        </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4">
+                         <h1 style="margin-top: 20px"><a href="https://www.skysports.com/" target="_blank">SkySport</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in skysportlinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.skysports.com{{i.link}}"target="_blank">{{i.text}}</a>
+                            </li>
+
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                     <div class="col-lg-4" >
+                         <h1 style="margin-top: 20px"><a href="https://www.nytimes.com/section/sports" target="_blank">Nytimes sport</a></h1>
+                        <ul style="list-style-type: none;padding: 0;margin: 0">
+                            {% for i in nytimeslinks %}
+
+                            <li style="margin-bottom: 10px">
+                                      <a href="https://www.nytimes.com/{{i.link}}" target="_blank" >{{i.text}}</a>
+                            </li>
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="dmtop">Scroll to Top</div>
+        
+    </div><!-- end wrapper -->
+
+    <!-- Core JavaScript
+    ================================================== -->
+
+
+
+{% endblock %}
+
